@@ -29,12 +29,6 @@
         <artifactId>flyway-core</artifactId>
         </dependency>
         
-        <plugin>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-maven-plugin</artifactId>
-            <version>5.2.4</version>
-        </plugin>
-
         <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -142,7 +136,11 @@
                     <scanIntervalSeconds>1</scanIntervalSeconds>
                     <reload>manual</reload>
                 </configuration>
-
+            </plugin>
+            <plugin>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-maven-plugin</artifactId>
+            <version>5.2.4</version>
             <configuration>
                     <user>myUser</user>
                     <password>mySecretPwd</password>
@@ -156,7 +154,6 @@
                         <otherplaceholder>value123</otherplaceholder>
                     </placeholders>
             </configuration>
-
             </plugin>
         </plugins>
     </build>
